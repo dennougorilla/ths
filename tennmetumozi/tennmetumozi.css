@@ -1,0 +1,46 @@
+/* Universal identifier */
+*{
+    -webkit-font-smoothing: antialiased;
+    margin:0; 
+    padding:0; 
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* Universal identifier */
+
+body {
+  background-color: black;
+}
+
+#name {
+    position:absolute;
+    margin:auto;
+    top:300px;
+    bottom:0px;
+    left:200px;
+    right:0px;
+    color:#37ff00;
+    font-family:Courier New;
+        -webkit-animation: nikki 0.25s infinite;
+        -moz-animation: nikki 0.25s infinite;
+}
+@-webkit-keyframes nikki
+{
+  /*0%   {color:#ff0000;}*/
+  25%  {color:#79ff55;}
+  50%  {color:#8fff70;}
+  75%  {color:#a7f791;}
+  100% {color:#d7ffcc;}
+}
+@-moz-keyframes nikki
+{
+  /*0%   {color:#ff0000;}*/
+  25%  {color:#79ff55;}
+  50%  {color:#8fff70;}
+  75%  {color:#a7f791;}
+  100% {color:#d7ffcc;}
+}

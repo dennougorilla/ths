@@ -1,0 +1,17 @@
+@font-face{
+font-family: meninblue;
+src: url(./fonts/MIB.ttf);
+}
+@font-face{
+font-family: chintzy;
+src: url(./fonts/chintzy.ttf);
+}
+@font-face{
+font-family: love;
+src: url(./fonts/LoveLetterWeb.ttf);
+}
+@font-face{
+font-family: LiquidCrystal;
+src: url(./fonts/LiquidCrystal-Normal.ttf);
+}
+

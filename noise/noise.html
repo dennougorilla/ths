@@ -1,0 +1,53 @@
+<style>
+.crt {
+float:left;
+position:relative;
+overflow:hidden;
+}
+.crt img {
+display:block;
+float:left;
+}
+.crt span.screen,
+    .crt span.snow {
+display:block;
+position:absolute;
+top:0;
+left:0;
+width:1000px;
+height:1000px;
+background:transparent url(crt-screen.gif) top left repeat;
+    }
+.crt span.snow {
+background:transparent url(crt-snow.gif) top left repeat;
+}
+.crt:hover span.snow {
+display:none;
+}
+.crt span.top {
+display:block;
+position:absolute;
+top:0;
+left:0;
+width:1000px;
+height:70px;
+background:transparent url(crt-top.png) top left repeat-x;
+}
+.crt span.bottom {
+display:block;
+position:absolute;
+left:0;
+bottom:0;
+width:1000px;
+height:110px;
+background:transparent url(crt-bottom.png) bottom left repeat-x;
+}
+</style>
+
+<div class="crt">
+	<img src="image.jpg" width="300" height="400" alt="Video Image!" />
+	<span class="snow"></span>
+	<span class="screen"></span>
+	<span class="top"></span>
+	<span class="bottom"></span>
+</div>

@@ -1,0 +1,24 @@
+// Lastpotion regular header
+header.text-center
+  h1 Responsive pure CSS background 
+  p Go ahead! You can dig in the scss variables to change the animation :)
+  span
+    | Made by 
+    a(href='http://aitorporro.com/') Aitor Porro
+  
+// !Header
+
+//- Declaration
+mixin list
+  - var i = 24
+  - while(i--){
+      .dot
+  - }
+  
+//- Use
+.container-fluid
+  - var i = 25
+  - while(i--){
+    .column
+      +list
+  - }

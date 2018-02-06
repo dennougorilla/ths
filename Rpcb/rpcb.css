@@ -1,0 +1,2502 @@
+/************
+* Options 
+*************/
+/* Colors */
+/*
+  $transformStyle: scale; 
+  $valueIn: "(1)"; 
+  $valueOut: "(.1)";
+
+  $transformStyle: rotateX; 
+  $valueIn: "(0deg)"; 
+  $valueOut: "(180deg)";
+
+  $transformStyle: rotateY; 
+  $valueIn: "(0deg)"; 
+  $valueOut: "(180deg)";
+*/
+/************
+* Imports 
+*************/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
+/************
+* Mixins
+*************/
+/************
+* Header
+*************/
+* {
+  box-sizing: border-box; }
+
+header {
+  width: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 10;
+  padding: 30px 42px;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  header h1 {
+    font-size: 30px; }
+  header span {
+    position: absolute;
+    left: 10px;
+    bottom: 10px; }
+    header span a {
+      color: #D72B37; }
+  header span {
+    color: #6A6A6A;
+    font-weight: 300;
+    font-size: 14px; }
+  header p {
+    margin: 20px 0;
+    font-weight: 400;
+    font-size: 17px;
+    color: #6A6A6A; }
+
+/************
+* Pen specific Styles
+*************/
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+  overflow: hidden; }
+
+.container-fluid {
+  overflow: hidden;
+  width: 100%;
+  height: 100%; }
+
+.column {
+  width: 99.8%;
+  height: 3.8%;
+  display: inline-block;
+  position: relative;
+  text-align: center; }
+  .column .dot {
+    content: '';
+    width: 3.5%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: inline-block;
+    z-index: 5;
+    opacity: 0.8;
+    box-shadow: 0px 0px 2px rgba(106, 106, 106, 0.5);
+    transform: translate(0px, 0px); }
+    .column .dot:nth-child(0) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0s; }
+    .column .dot:nth-child(1) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.2s; }
+    .column .dot:nth-child(2) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.4s; }
+    .column .dot:nth-child(3) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.6s; }
+    .column .dot:nth-child(4) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.8s; }
+    .column .dot:nth-child(5) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1s; }
+    .column .dot:nth-child(6) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.2s; }
+    .column .dot:nth-child(7) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.4s; }
+    .column .dot:nth-child(8) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.6s; }
+    .column .dot:nth-child(9) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.8s; }
+    .column .dot:nth-child(10) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2s; }
+    .column .dot:nth-child(11) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.2s; }
+    .column .dot:nth-child(12) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.4s; }
+    .column .dot:nth-child(13) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.6s; }
+    .column .dot:nth-child(14) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.8s; }
+    .column .dot:nth-child(15) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3s; }
+    .column .dot:nth-child(16) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.2s; }
+    .column .dot:nth-child(17) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.4s; }
+    .column .dot:nth-child(18) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.6s; }
+    .column .dot:nth-child(19) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.8s; }
+    .column .dot:nth-child(20) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4s; }
+    .column .dot:nth-child(21) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.2s; }
+    .column .dot:nth-child(22) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.4s; }
+    .column .dot:nth-child(23) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.6s; }
+    .column .dot:nth-child(24) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.8s; }
+    .column .dot:nth-child(25) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0s; }
+    .column .dot:nth-child(26) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.2s; }
+    .column .dot:nth-child(27) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.4s; }
+    .column .dot:nth-child(28) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.6s; }
+    .column .dot:nth-child(29) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.8s; }
+    .column .dot:nth-child(30) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1s; }
+    .column .dot:nth-child(31) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.2s; }
+    .column .dot:nth-child(32) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.4s; }
+    .column .dot:nth-child(33) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.6s; }
+    .column .dot:nth-child(34) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.8s; }
+    .column .dot:nth-child(35) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2s; }
+    .column .dot:nth-child(36) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.2s; }
+    .column .dot:nth-child(37) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.4s; }
+    .column .dot:nth-child(38) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.6s; }
+    .column .dot:nth-child(39) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.8s; }
+    .column .dot:nth-child(40) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3s; }
+    .column .dot:nth-child(41) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.2s; }
+    .column .dot:nth-child(42) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.4s; }
+    .column .dot:nth-child(43) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.6s; }
+    .column .dot:nth-child(44) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.8s; }
+    .column .dot:nth-child(45) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4s; }
+    .column .dot:nth-child(46) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.2s; }
+    .column .dot:nth-child(47) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.4s; }
+    .column .dot:nth-child(48) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.6s; }
+    .column .dot:nth-child(49) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.8s; }
+    .column .dot:nth-child(50) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0s; }
+    .column .dot:nth-child(51) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.2s; }
+    .column .dot:nth-child(52) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.4s; }
+    .column .dot:nth-child(53) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.6s; }
+    .column .dot:nth-child(54) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.8s; }
+    .column .dot:nth-child(55) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1s; }
+    .column .dot:nth-child(56) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.2s; }
+    .column .dot:nth-child(57) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.4s; }
+    .column .dot:nth-child(58) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.6s; }
+    .column .dot:nth-child(59) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.8s; }
+    .column .dot:nth-child(60) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2s; }
+    .column .dot:nth-child(61) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.2s; }
+    .column .dot:nth-child(62) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.4s; }
+    .column .dot:nth-child(63) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.6s; }
+    .column .dot:nth-child(64) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.8s; }
+    .column .dot:nth-child(65) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3s; }
+    .column .dot:nth-child(66) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.2s; }
+    .column .dot:nth-child(67) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.4s; }
+    .column .dot:nth-child(68) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.6s; }
+    .column .dot:nth-child(69) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.8s; }
+    .column .dot:nth-child(70) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4s; }
+    .column .dot:nth-child(71) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.2s; }
+    .column .dot:nth-child(72) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.4s; }
+    .column .dot:nth-child(73) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.6s; }
+    .column .dot:nth-child(74) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.8s; }
+    .column .dot:nth-child(75) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0s; }
+    .column .dot:nth-child(76) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.2s; }
+    .column .dot:nth-child(77) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.4s; }
+    .column .dot:nth-child(78) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.6s; }
+    .column .dot:nth-child(79) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.8s; }
+    .column .dot:nth-child(80) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1s; }
+    .column .dot:nth-child(81) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.2s; }
+    .column .dot:nth-child(82) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.4s; }
+    .column .dot:nth-child(83) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.6s; }
+    .column .dot:nth-child(84) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.8s; }
+    .column .dot:nth-child(85) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2s; }
+    .column .dot:nth-child(86) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.2s; }
+    .column .dot:nth-child(87) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.4s; }
+    .column .dot:nth-child(88) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.6s; }
+    .column .dot:nth-child(89) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.8s; }
+    .column .dot:nth-child(90) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3s; }
+    .column .dot:nth-child(91) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.2s; }
+    .column .dot:nth-child(92) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.4s; }
+    .column .dot:nth-child(93) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.6s; }
+    .column .dot:nth-child(94) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.8s; }
+    .column .dot:nth-child(95) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4s; }
+    .column .dot:nth-child(96) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.2s; }
+    .column .dot:nth-child(97) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.4s; }
+    .column .dot:nth-child(98) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.6s; }
+    .column .dot:nth-child(99) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.8s; }
+    .column .dot:nth-child(100) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0s; }
+    .column .dot:nth-child(101) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.2s; }
+    .column .dot:nth-child(102) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.4s; }
+    .column .dot:nth-child(103) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.6s; }
+    .column .dot:nth-child(104) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.8s; }
+    .column .dot:nth-child(105) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1s; }
+    .column .dot:nth-child(106) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.2s; }
+    .column .dot:nth-child(107) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.4s; }
+    .column .dot:nth-child(108) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.6s; }
+    .column .dot:nth-child(109) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.8s; }
+    .column .dot:nth-child(110) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2s; }
+    .column .dot:nth-child(111) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.2s; }
+    .column .dot:nth-child(112) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.4s; }
+    .column .dot:nth-child(113) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.6s; }
+    .column .dot:nth-child(114) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.8s; }
+    .column .dot:nth-child(115) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3s; }
+    .column .dot:nth-child(116) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.2s; }
+    .column .dot:nth-child(117) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.4s; }
+    .column .dot:nth-child(118) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.6s; }
+    .column .dot:nth-child(119) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.8s; }
+    .column .dot:nth-child(120) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4s; }
+    .column .dot:nth-child(121) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.2s; }
+    .column .dot:nth-child(122) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.4s; }
+    .column .dot:nth-child(123) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.6s; }
+    .column .dot:nth-child(124) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.8s; }
+    .column .dot:nth-child(125) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0s; }
+    .column .dot:nth-child(126) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.2s; }
+    .column .dot:nth-child(127) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.4s; }
+    .column .dot:nth-child(128) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.6s; }
+    .column .dot:nth-child(129) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.8s; }
+    .column .dot:nth-child(130) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1s; }
+    .column .dot:nth-child(131) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.2s; }
+    .column .dot:nth-child(132) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.4s; }
+    .column .dot:nth-child(133) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.6s; }
+    .column .dot:nth-child(134) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.8s; }
+    .column .dot:nth-child(135) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2s; }
+    .column .dot:nth-child(136) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.2s; }
+    .column .dot:nth-child(137) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.4s; }
+    .column .dot:nth-child(138) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.6s; }
+    .column .dot:nth-child(139) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.8s; }
+    .column .dot:nth-child(140) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3s; }
+    .column .dot:nth-child(141) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.2s; }
+    .column .dot:nth-child(142) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.4s; }
+    .column .dot:nth-child(143) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.6s; }
+    .column .dot:nth-child(144) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.8s; }
+    .column .dot:nth-child(145) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4s; }
+    .column .dot:nth-child(146) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.2s; }
+    .column .dot:nth-child(147) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.4s; }
+    .column .dot:nth-child(148) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.6s; }
+    .column .dot:nth-child(149) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.8s; }
+    .column .dot:nth-child(150) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0s; }
+    .column .dot:nth-child(151) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.2s; }
+    .column .dot:nth-child(152) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.4s; }
+    .column .dot:nth-child(153) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.6s; }
+    .column .dot:nth-child(154) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.8s; }
+    .column .dot:nth-child(155) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1s; }
+    .column .dot:nth-child(156) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.2s; }
+    .column .dot:nth-child(157) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.4s; }
+    .column .dot:nth-child(158) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.6s; }
+    .column .dot:nth-child(159) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.8s; }
+    .column .dot:nth-child(160) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2s; }
+    .column .dot:nth-child(161) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.2s; }
+    .column .dot:nth-child(162) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.4s; }
+    .column .dot:nth-child(163) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.6s; }
+    .column .dot:nth-child(164) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.8s; }
+    .column .dot:nth-child(165) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3s; }
+    .column .dot:nth-child(166) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.2s; }
+    .column .dot:nth-child(167) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.4s; }
+    .column .dot:nth-child(168) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.6s; }
+    .column .dot:nth-child(169) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.8s; }
+    .column .dot:nth-child(170) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4s; }
+    .column .dot:nth-child(171) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.2s; }
+    .column .dot:nth-child(172) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.4s; }
+    .column .dot:nth-child(173) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.6s; }
+    .column .dot:nth-child(174) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.8s; }
+    .column .dot:nth-child(175) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0s; }
+    .column .dot:nth-child(176) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.2s; }
+    .column .dot:nth-child(177) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.4s; }
+    .column .dot:nth-child(178) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.6s; }
+    .column .dot:nth-child(179) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.8s; }
+    .column .dot:nth-child(180) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1s; }
+    .column .dot:nth-child(181) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.2s; }
+    .column .dot:nth-child(182) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.4s; }
+    .column .dot:nth-child(183) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.6s; }
+    .column .dot:nth-child(184) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.8s; }
+    .column .dot:nth-child(185) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2s; }
+    .column .dot:nth-child(186) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.2s; }
+    .column .dot:nth-child(187) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.4s; }
+    .column .dot:nth-child(188) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.6s; }
+    .column .dot:nth-child(189) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.8s; }
+    .column .dot:nth-child(190) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3s; }
+    .column .dot:nth-child(191) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.2s; }
+    .column .dot:nth-child(192) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.4s; }
+    .column .dot:nth-child(193) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.6s; }
+    .column .dot:nth-child(194) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.8s; }
+    .column .dot:nth-child(195) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4s; }
+    .column .dot:nth-child(196) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.2s; }
+    .column .dot:nth-child(197) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.4s; }
+    .column .dot:nth-child(198) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.6s; }
+    .column .dot:nth-child(199) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.8s; }
+    .column .dot:nth-child(200) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0s; }
+    .column .dot:nth-child(201) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.2s; }
+    .column .dot:nth-child(202) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.4s; }
+    .column .dot:nth-child(203) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.6s; }
+    .column .dot:nth-child(204) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.8s; }
+    .column .dot:nth-child(205) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1s; }
+    .column .dot:nth-child(206) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.2s; }
+    .column .dot:nth-child(207) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.4s; }
+    .column .dot:nth-child(208) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.6s; }
+    .column .dot:nth-child(209) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.8s; }
+    .column .dot:nth-child(210) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2s; }
+    .column .dot:nth-child(211) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.2s; }
+    .column .dot:nth-child(212) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.4s; }
+    .column .dot:nth-child(213) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.6s; }
+    .column .dot:nth-child(214) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.8s; }
+    .column .dot:nth-child(215) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3s; }
+    .column .dot:nth-child(216) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.2s; }
+    .column .dot:nth-child(217) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.4s; }
+    .column .dot:nth-child(218) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.6s; }
+    .column .dot:nth-child(219) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.8s; }
+    .column .dot:nth-child(220) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4s; }
+    .column .dot:nth-child(221) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.2s; }
+    .column .dot:nth-child(222) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.4s; }
+    .column .dot:nth-child(223) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.6s; }
+    .column .dot:nth-child(224) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.8s; }
+    .column .dot:nth-child(225) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0s; }
+    .column .dot:nth-child(226) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.2s; }
+    .column .dot:nth-child(227) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.4s; }
+    .column .dot:nth-child(228) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.6s; }
+    .column .dot:nth-child(229) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.8s; }
+    .column .dot:nth-child(230) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1s; }
+    .column .dot:nth-child(231) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.2s; }
+    .column .dot:nth-child(232) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.4s; }
+    .column .dot:nth-child(233) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.6s; }
+    .column .dot:nth-child(234) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.8s; }
+    .column .dot:nth-child(235) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2s; }
+    .column .dot:nth-child(236) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.2s; }
+    .column .dot:nth-child(237) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.4s; }
+    .column .dot:nth-child(238) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.6s; }
+    .column .dot:nth-child(239) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.8s; }
+    .column .dot:nth-child(240) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3s; }
+    .column .dot:nth-child(241) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.2s; }
+    .column .dot:nth-child(242) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.4s; }
+    .column .dot:nth-child(243) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.6s; }
+    .column .dot:nth-child(244) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.8s; }
+    .column .dot:nth-child(245) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4s; }
+    .column .dot:nth-child(246) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.2s; }
+    .column .dot:nth-child(247) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.4s; }
+    .column .dot:nth-child(248) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.6s; }
+    .column .dot:nth-child(249) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.8s; }
+    .column .dot:nth-child(250) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0s; }
+    .column .dot:nth-child(251) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.2s; }
+    .column .dot:nth-child(252) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.4s; }
+    .column .dot:nth-child(253) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.6s; }
+    .column .dot:nth-child(254) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.8s; }
+    .column .dot:nth-child(255) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1s; }
+    .column .dot:nth-child(256) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.2s; }
+    .column .dot:nth-child(257) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.4s; }
+    .column .dot:nth-child(258) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.6s; }
+    .column .dot:nth-child(259) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.8s; }
+    .column .dot:nth-child(260) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2s; }
+    .column .dot:nth-child(261) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.2s; }
+    .column .dot:nth-child(262) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.4s; }
+    .column .dot:nth-child(263) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.6s; }
+    .column .dot:nth-child(264) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.8s; }
+    .column .dot:nth-child(265) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3s; }
+    .column .dot:nth-child(266) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.2s; }
+    .column .dot:nth-child(267) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.4s; }
+    .column .dot:nth-child(268) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.6s; }
+    .column .dot:nth-child(269) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.8s; }
+    .column .dot:nth-child(270) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4s; }
+    .column .dot:nth-child(271) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.2s; }
+    .column .dot:nth-child(272) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.4s; }
+    .column .dot:nth-child(273) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.6s; }
+    .column .dot:nth-child(274) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.8s; }
+    .column .dot:nth-child(275) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0s; }
+    .column .dot:nth-child(276) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.2s; }
+    .column .dot:nth-child(277) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.4s; }
+    .column .dot:nth-child(278) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.6s; }
+    .column .dot:nth-child(279) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.8s; }
+    .column .dot:nth-child(280) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1s; }
+    .column .dot:nth-child(281) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.2s; }
+    .column .dot:nth-child(282) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.4s; }
+    .column .dot:nth-child(283) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.6s; }
+    .column .dot:nth-child(284) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.8s; }
+    .column .dot:nth-child(285) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2s; }
+    .column .dot:nth-child(286) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.2s; }
+    .column .dot:nth-child(287) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.4s; }
+    .column .dot:nth-child(288) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.6s; }
+    .column .dot:nth-child(289) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.8s; }
+    .column .dot:nth-child(290) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3s; }
+    .column .dot:nth-child(291) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.2s; }
+    .column .dot:nth-child(292) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.4s; }
+    .column .dot:nth-child(293) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.6s; }
+    .column .dot:nth-child(294) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.8s; }
+    .column .dot:nth-child(295) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4s; }
+    .column .dot:nth-child(296) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.2s; }
+    .column .dot:nth-child(297) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.4s; }
+    .column .dot:nth-child(298) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.6s; }
+    .column .dot:nth-child(299) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.8s; }
+    .column .dot:nth-child(300) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0s; }
+    .column .dot:nth-child(301) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.2s; }
+    .column .dot:nth-child(302) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.4s; }
+    .column .dot:nth-child(303) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.6s; }
+    .column .dot:nth-child(304) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.8s; }
+    .column .dot:nth-child(305) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1s; }
+    .column .dot:nth-child(306) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.2s; }
+    .column .dot:nth-child(307) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.4s; }
+    .column .dot:nth-child(308) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.6s; }
+    .column .dot:nth-child(309) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.8s; }
+    .column .dot:nth-child(310) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2s; }
+    .column .dot:nth-child(311) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.2s; }
+    .column .dot:nth-child(312) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.4s; }
+    .column .dot:nth-child(313) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.6s; }
+    .column .dot:nth-child(314) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.8s; }
+    .column .dot:nth-child(315) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3s; }
+    .column .dot:nth-child(316) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.2s; }
+    .column .dot:nth-child(317) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.4s; }
+    .column .dot:nth-child(318) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.6s; }
+    .column .dot:nth-child(319) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.8s; }
+    .column .dot:nth-child(320) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4s; }
+    .column .dot:nth-child(321) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.2s; }
+    .column .dot:nth-child(322) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.4s; }
+    .column .dot:nth-child(323) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.6s; }
+    .column .dot:nth-child(324) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.8s; }
+    .column .dot:nth-child(325) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0s; }
+    .column .dot:nth-child(326) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.2s; }
+    .column .dot:nth-child(327) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.4s; }
+    .column .dot:nth-child(328) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.6s; }
+    .column .dot:nth-child(329) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.8s; }
+    .column .dot:nth-child(330) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1s; }
+    .column .dot:nth-child(331) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.2s; }
+    .column .dot:nth-child(332) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.4s; }
+    .column .dot:nth-child(333) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.6s; }
+    .column .dot:nth-child(334) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.8s; }
+    .column .dot:nth-child(335) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2s; }
+    .column .dot:nth-child(336) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.2s; }
+    .column .dot:nth-child(337) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.4s; }
+    .column .dot:nth-child(338) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.6s; }
+    .column .dot:nth-child(339) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.8s; }
+    .column .dot:nth-child(340) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3s; }
+    .column .dot:nth-child(341) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.2s; }
+    .column .dot:nth-child(342) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.4s; }
+    .column .dot:nth-child(343) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.6s; }
+    .column .dot:nth-child(344) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.8s; }
+    .column .dot:nth-child(345) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4s; }
+    .column .dot:nth-child(346) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.2s; }
+    .column .dot:nth-child(347) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.4s; }
+    .column .dot:nth-child(348) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.6s; }
+    .column .dot:nth-child(349) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.8s; }
+    .column .dot:nth-child(350) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0s; }
+    .column .dot:nth-child(351) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.2s; }
+    .column .dot:nth-child(352) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.4s; }
+    .column .dot:nth-child(353) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.6s; }
+    .column .dot:nth-child(354) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.8s; }
+    .column .dot:nth-child(355) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1s; }
+    .column .dot:nth-child(356) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.2s; }
+    .column .dot:nth-child(357) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.4s; }
+    .column .dot:nth-child(358) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.6s; }
+    .column .dot:nth-child(359) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.8s; }
+    .column .dot:nth-child(360) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2s; }
+    .column .dot:nth-child(361) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.2s; }
+    .column .dot:nth-child(362) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.4s; }
+    .column .dot:nth-child(363) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.6s; }
+    .column .dot:nth-child(364) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.8s; }
+    .column .dot:nth-child(365) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3s; }
+    .column .dot:nth-child(366) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.2s; }
+    .column .dot:nth-child(367) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.4s; }
+    .column .dot:nth-child(368) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.6s; }
+    .column .dot:nth-child(369) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.8s; }
+    .column .dot:nth-child(370) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4s; }
+    .column .dot:nth-child(371) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.2s; }
+    .column .dot:nth-child(372) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.4s; }
+    .column .dot:nth-child(373) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.6s; }
+    .column .dot:nth-child(374) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.8s; }
+    .column .dot:nth-child(375) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0s; }
+    .column .dot:nth-child(376) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.2s; }
+    .column .dot:nth-child(377) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.4s; }
+    .column .dot:nth-child(378) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.6s; }
+    .column .dot:nth-child(379) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.8s; }
+    .column .dot:nth-child(380) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1s; }
+    .column .dot:nth-child(381) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.2s; }
+    .column .dot:nth-child(382) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.4s; }
+    .column .dot:nth-child(383) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.6s; }
+    .column .dot:nth-child(384) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.8s; }
+    .column .dot:nth-child(385) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2s; }
+    .column .dot:nth-child(386) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.2s; }
+    .column .dot:nth-child(387) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.4s; }
+    .column .dot:nth-child(388) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.6s; }
+    .column .dot:nth-child(389) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.8s; }
+    .column .dot:nth-child(390) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3s; }
+    .column .dot:nth-child(391) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.2s; }
+    .column .dot:nth-child(392) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.4s; }
+    .column .dot:nth-child(393) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.6s; }
+    .column .dot:nth-child(394) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.8s; }
+    .column .dot:nth-child(395) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4s; }
+    .column .dot:nth-child(396) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.2s; }
+    .column .dot:nth-child(397) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.4s; }
+    .column .dot:nth-child(398) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.6s; }
+    .column .dot:nth-child(399) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.8s; }
+    .column .dot:nth-child(400) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0s; }
+    .column .dot:nth-child(401) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.2s; }
+    .column .dot:nth-child(402) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.4s; }
+    .column .dot:nth-child(403) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.6s; }
+    .column .dot:nth-child(404) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.8s; }
+    .column .dot:nth-child(405) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1s; }
+    .column .dot:nth-child(406) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.2s; }
+    .column .dot:nth-child(407) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.4s; }
+    .column .dot:nth-child(408) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.6s; }
+    .column .dot:nth-child(409) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.8s; }
+    .column .dot:nth-child(410) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2s; }
+    .column .dot:nth-child(411) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.2s; }
+    .column .dot:nth-child(412) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.4s; }
+    .column .dot:nth-child(413) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.6s; }
+    .column .dot:nth-child(414) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.8s; }
+    .column .dot:nth-child(415) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3s; }
+    .column .dot:nth-child(416) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.2s; }
+    .column .dot:nth-child(417) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.4s; }
+    .column .dot:nth-child(418) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.6s; }
+    .column .dot:nth-child(419) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.8s; }
+    .column .dot:nth-child(420) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4s; }
+    .column .dot:nth-child(421) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.2s; }
+    .column .dot:nth-child(422) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.4s; }
+    .column .dot:nth-child(423) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.6s; }
+    .column .dot:nth-child(424) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.8s; }
+    .column .dot:nth-child(425) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0s; }
+    .column .dot:nth-child(426) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.2s; }
+    .column .dot:nth-child(427) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.4s; }
+    .column .dot:nth-child(428) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.6s; }
+    .column .dot:nth-child(429) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.8s; }
+    .column .dot:nth-child(430) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1s; }
+    .column .dot:nth-child(431) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.2s; }
+    .column .dot:nth-child(432) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.4s; }
+    .column .dot:nth-child(433) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.6s; }
+    .column .dot:nth-child(434) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.8s; }
+    .column .dot:nth-child(435) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2s; }
+    .column .dot:nth-child(436) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.2s; }
+    .column .dot:nth-child(437) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.4s; }
+    .column .dot:nth-child(438) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.6s; }
+    .column .dot:nth-child(439) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.8s; }
+    .column .dot:nth-child(440) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3s; }
+    .column .dot:nth-child(441) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.2s; }
+    .column .dot:nth-child(442) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.4s; }
+    .column .dot:nth-child(443) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.6s; }
+    .column .dot:nth-child(444) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.8s; }
+    .column .dot:nth-child(445) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4s; }
+    .column .dot:nth-child(446) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.2s; }
+    .column .dot:nth-child(447) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.4s; }
+    .column .dot:nth-child(448) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.6s; }
+    .column .dot:nth-child(449) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.8s; }
+    .column .dot:nth-child(450) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0s; }
+    .column .dot:nth-child(451) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.2s; }
+    .column .dot:nth-child(452) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.4s; }
+    .column .dot:nth-child(453) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.6s; }
+    .column .dot:nth-child(454) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.8s; }
+    .column .dot:nth-child(455) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1s; }
+    .column .dot:nth-child(456) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.2s; }
+    .column .dot:nth-child(457) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.4s; }
+    .column .dot:nth-child(458) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.6s; }
+    .column .dot:nth-child(459) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.8s; }
+    .column .dot:nth-child(460) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2s; }
+    .column .dot:nth-child(461) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.2s; }
+    .column .dot:nth-child(462) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.4s; }
+    .column .dot:nth-child(463) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.6s; }
+    .column .dot:nth-child(464) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.8s; }
+    .column .dot:nth-child(465) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3s; }
+    .column .dot:nth-child(466) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.2s; }
+    .column .dot:nth-child(467) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.4s; }
+    .column .dot:nth-child(468) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.6s; }
+    .column .dot:nth-child(469) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.8s; }
+    .column .dot:nth-child(470) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4s; }
+    .column .dot:nth-child(471) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.2s; }
+    .column .dot:nth-child(472) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.4s; }
+    .column .dot:nth-child(473) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.6s; }
+    .column .dot:nth-child(474) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.8s; }
+    .column .dot:nth-child(475) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0s; }
+    .column .dot:nth-child(476) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.2s; }
+    .column .dot:nth-child(477) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.4s; }
+    .column .dot:nth-child(478) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.6s; }
+    .column .dot:nth-child(479) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.8s; }
+    .column .dot:nth-child(480) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1s; }
+    .column .dot:nth-child(481) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.2s; }
+    .column .dot:nth-child(482) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.4s; }
+    .column .dot:nth-child(483) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.6s; }
+    .column .dot:nth-child(484) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.8s; }
+    .column .dot:nth-child(485) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2s; }
+    .column .dot:nth-child(486) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.2s; }
+    .column .dot:nth-child(487) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.4s; }
+    .column .dot:nth-child(488) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.6s; }
+    .column .dot:nth-child(489) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.8s; }
+    .column .dot:nth-child(490) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3s; }
+    .column .dot:nth-child(491) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.2s; }
+    .column .dot:nth-child(492) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.4s; }
+    .column .dot:nth-child(493) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.6s; }
+    .column .dot:nth-child(494) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.8s; }
+    .column .dot:nth-child(495) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4s; }
+    .column .dot:nth-child(496) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.2s; }
+    .column .dot:nth-child(497) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.4s; }
+    .column .dot:nth-child(498) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.6s; }
+    .column .dot:nth-child(499) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.8s; }
+    .column .dot:nth-child(500) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0s; }
+    .column .dot:nth-child(501) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.2s; }
+    .column .dot:nth-child(502) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.4s; }
+    .column .dot:nth-child(503) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.6s; }
+    .column .dot:nth-child(504) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.8s; }
+    .column .dot:nth-child(505) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1s; }
+    .column .dot:nth-child(506) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.2s; }
+    .column .dot:nth-child(507) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.4s; }
+    .column .dot:nth-child(508) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.6s; }
+    .column .dot:nth-child(509) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.8s; }
+    .column .dot:nth-child(510) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2s; }
+    .column .dot:nth-child(511) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.2s; }
+    .column .dot:nth-child(512) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.4s; }
+    .column .dot:nth-child(513) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.6s; }
+    .column .dot:nth-child(514) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.8s; }
+    .column .dot:nth-child(515) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3s; }
+    .column .dot:nth-child(516) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.2s; }
+    .column .dot:nth-child(517) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.4s; }
+    .column .dot:nth-child(518) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.6s; }
+    .column .dot:nth-child(519) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.8s; }
+    .column .dot:nth-child(520) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4s; }
+    .column .dot:nth-child(521) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.2s; }
+    .column .dot:nth-child(522) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.4s; }
+    .column .dot:nth-child(523) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.6s; }
+    .column .dot:nth-child(524) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.8s; }
+    .column .dot:nth-child(525) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0s; }
+    .column .dot:nth-child(526) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.2s; }
+    .column .dot:nth-child(527) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.4s; }
+    .column .dot:nth-child(528) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.6s; }
+    .column .dot:nth-child(529) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.8s; }
+    .column .dot:nth-child(530) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1s; }
+    .column .dot:nth-child(531) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.2s; }
+    .column .dot:nth-child(532) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.4s; }
+    .column .dot:nth-child(533) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.6s; }
+    .column .dot:nth-child(534) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.8s; }
+    .column .dot:nth-child(535) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2s; }
+    .column .dot:nth-child(536) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.2s; }
+    .column .dot:nth-child(537) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.4s; }
+    .column .dot:nth-child(538) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.6s; }
+    .column .dot:nth-child(539) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.8s; }
+    .column .dot:nth-child(540) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3s; }
+    .column .dot:nth-child(541) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.2s; }
+    .column .dot:nth-child(542) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.4s; }
+    .column .dot:nth-child(543) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.6s; }
+    .column .dot:nth-child(544) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.8s; }
+    .column .dot:nth-child(545) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4s; }
+    .column .dot:nth-child(546) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.2s; }
+    .column .dot:nth-child(547) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.4s; }
+    .column .dot:nth-child(548) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.6s; }
+    .column .dot:nth-child(549) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.8s; }
+    .column .dot:nth-child(550) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0s; }
+    .column .dot:nth-child(551) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.2s; }
+    .column .dot:nth-child(552) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.4s; }
+    .column .dot:nth-child(553) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.6s; }
+    .column .dot:nth-child(554) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.8s; }
+    .column .dot:nth-child(555) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1s; }
+    .column .dot:nth-child(556) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.2s; }
+    .column .dot:nth-child(557) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.4s; }
+    .column .dot:nth-child(558) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.6s; }
+    .column .dot:nth-child(559) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.8s; }
+    .column .dot:nth-child(560) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2s; }
+    .column .dot:nth-child(561) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.2s; }
+    .column .dot:nth-child(562) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.4s; }
+    .column .dot:nth-child(563) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.6s; }
+    .column .dot:nth-child(564) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.8s; }
+    .column .dot:nth-child(565) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3s; }
+    .column .dot:nth-child(566) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.2s; }
+    .column .dot:nth-child(567) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.4s; }
+    .column .dot:nth-child(568) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.6s; }
+    .column .dot:nth-child(569) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.8s; }
+    .column .dot:nth-child(570) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4s; }
+    .column .dot:nth-child(571) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.2s; }
+    .column .dot:nth-child(572) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.4s; }
+    .column .dot:nth-child(573) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.6s; }
+    .column .dot:nth-child(574) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.8s; }
+    .column .dot:nth-child(575) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0s; }
+    .column .dot:nth-child(576) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.2s; }
+    .column .dot:nth-child(577) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.4s; }
+    .column .dot:nth-child(578) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.6s; }
+    .column .dot:nth-child(579) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 0.8s; }
+    .column .dot:nth-child(580) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1s; }
+    .column .dot:nth-child(581) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.2s; }
+    .column .dot:nth-child(582) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.4s; }
+    .column .dot:nth-child(583) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.6s; }
+    .column .dot:nth-child(584) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 1.8s; }
+    .column .dot:nth-child(585) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2s; }
+    .column .dot:nth-child(586) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.2s; }
+    .column .dot:nth-child(587) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.4s; }
+    .column .dot:nth-child(588) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.6s; }
+    .column .dot:nth-child(589) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 2.8s; }
+    .column .dot:nth-child(590) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3s; }
+    .column .dot:nth-child(591) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.2s; }
+    .column .dot:nth-child(592) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.4s; }
+    .column .dot:nth-child(593) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.6s; }
+    .column .dot:nth-child(594) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 3.8s; }
+    .column .dot:nth-child(595) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4s; }
+    .column .dot:nth-child(596) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.2s; }
+    .column .dot:nth-child(597) {
+      background-color: #37DB37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.4s; }
+    .column .dot:nth-child(598) {
+      background-color: #372BD7;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.6s; }
+    .column .dot:nth-child(599) {
+      background-color: #D72B37;
+      animation: animate 2.2s infinite ease alternate;
+      animation-delay: 4.8s; }
+
+@keyframes animate {
+  0% {
+    transform: translate(0px, 0px);
+    opacity: 0.8; }
+  100% {
+    transform: translate(20px, 10px);
+    opacity: 0; } }
+
+/*# sourceMappingURL=rpcb.css.map */

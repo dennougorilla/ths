@@ -10,3 +10,6 @@ www.staggeringbeauty.com
 http://text.jodi.org/107.html     
 http://973-eht-namuh-973.com/    
 http://abehiroshi.la.coocan.jp/     
+https://www.feebeejp.com    
+https://www.enonaka.com   
+

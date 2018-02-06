@@ -1,0 +1,156 @@
+/************
+* Options 
+*************/
+//Transform values
+//Have fun with it, try other transforms:
+
+/* Colors */
+$white :  #FFFFFF; 
+$gray  :  #6A6A6A;
+$black :  #333333;
+
+$red   :  #D72B37;
+$blue  :  #372BD7;
+$green :  #37DB37;
+
+/*
+  $transformStyle: scale; 
+  $valueIn: "(1)"; 
+  $valueOut: "(.1)";
+
+  $transformStyle: rotateX; 
+  $valueIn: "(0deg)"; 
+  $valueOut: "(180deg)";
+
+  $transformStyle: rotateY; 
+  $valueIn: "(0deg)"; 
+  $valueOut: "(180deg)";
+*/
+
+$transformStyle: translate; 
+$valueIn: "(0px, 0px)"; 
+$valueOut: "(20px, 10px)";
+
+//Opacity values
+$opacityIn: .8;
+$opacityOut: 0;
+
+//Animation values
+$animationDuration: 2.2s;
+
+//List of colors used can be expanded up to the number of rows.
+$colors:  ( $red, $green, $blue);
+
+/************
+* Imports 
+*************/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
+
+/************
+* Mixins
+*************/
+@mixin transform($t,$v){
+  transform: #{$t}#{$v};
+}
+@mixin opacity($o) {
+  opacity: ($o);
+}
+
+
+/************
+* Header
+*************/
+*{box-sizing: border-box;}
+
+header{
+  width:50%;
+  background: rgba(255,255,255, 0.95);
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate3d(-50%,-50%,0);
+  z-index: 10;
+  padding: 30px 42px;
+  text-align:center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  h1{
+    font-size:30px;
+  }
+  span{
+    position:absolute;
+    left:10px;
+    bottom:10px;
+    a{ 
+      color: $red;
+    }
+  }
+
+  span{
+    color: $gray;
+    font-weight: 300;
+    font-size: 14px;
+  }
+  p{
+    margin: 20px 0;
+    font-weight: 400;
+    font-size: 17px;
+    color: $gray;
+  }
+}
+
+/************
+* Pen specific Styles
+*************/
+body{
+  position:absolute;
+  width:100%;
+  height: 100%;
+  background-color: $black;
+  overflow:hidden;
+}
+.container-fluid{
+  overflow:hidden;
+  width:100%;
+  height: 100%;
+}
+.column{
+  width:99.8%;
+  height:3.8%;
+  display:inline-block;
+  position:relative;
+  text-align:center;
+  .dot{
+    content:'';
+    width:3.5%;
+    margin:0;
+    padding:0;
+    height: 100%;
+    display:inline-block;
+    z-index: 5;
+    @include opacity($opacityIn);
+    box-shadow: 0px 0px 2px rgba($gray,0.5);
+    @include transform($transformStyle, $valueIn);
+    @for $i from 0 to 24 {
+      @for $j from 0 through 24 {
+        &:nth-child(#{$i*25 + $j}) {
+          background-color: nth($colors, $j % length($colors) + 1);
+          animation: animate $animationDuration infinite ease alternate;
+          animation-delay: ($j*4)/20+s;
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes animate {
+  0% {
+    @include transform($transformStyle, $valueIn);
+    @include opacity($opacityIn);
+  }
+  100% {
+    @include transform($transformStyle, $valueOut);    
+    @include opacity($opacityOut);
+  }
+}
